@@ -19,7 +19,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/user", postRoutes);
-
+app.get('/',async(req,res)=>{
+  res.redirect('/user/posts');
+})
 const PORT = 5000;
 
 sequelize.sync({ alter: true }).then(() => {
