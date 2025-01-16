@@ -3,7 +3,7 @@ const { Sequelize } = require("sequelize");
 const sequelize = new Sequelize("social_feed_db", "social_feed", "Hello@123", {
   host: "localhost",
   dialect: "mysql",
-  logging: false, // Disable logging for cleaner output
+  port: 3306, // Disable logging for cleaner output
 });
 
 sequelize
